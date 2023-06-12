@@ -1,0 +1,8 @@
+/* 截取字符串 */
+var subString = function (str, start, length){
+  return str.substring(start, length);
+}
+
+module.exports = {
+  substring: subString,
+};

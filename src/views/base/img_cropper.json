@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "image-cropper": "../../components/img/image-cropper",
+    "wm-button": "../../components/form/button/index"
+  },
+  "navigationBarTitleText": "图片裁剪",
+  "backgroundTextStyle":"dark",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTextStyle": "white"
+}

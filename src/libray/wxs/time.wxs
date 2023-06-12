@@ -1,0 +1,40 @@
+/* 当前时间戳 */
+var Time = function (data){
+  var t = data?getDate(data):getDate();
+  var now = t.getTime();
+  return Math.round(now/1000);
+}
+
+/* 时间戳转换 */
+var StrToTime = function (datetime){
+  var arr = datetime.split(' ');
+  var num = parseInt(arr[0]);
+  var n = 0;
+  switch (arr[1]) {
+    case 'second': n=num*1; break;
+    case 'minute': n=num*60; break;
+    case 'hour': n=num*60*60; break;
+    case 'day': n=num*60*60*24; break;
+    case 'week': n=num*60*60*24*7; break;
+    case 'month': n=num*60*60*24*7*30; break;
+    case 'year': n=num*60*60*24*365; break;
+  }
+  var now = n!=0?getDate().getTime():getDate(datetime).getTime();
+  now = Math.round(now/1000)+n;
+  return now>0?now:0;
+}
+
+/* 对比天数 */
+var getDay = function (t){
+  var day = StrToTime(t.substring(0, 10)+' 00:00:00');
+  var now = Time();
+  if(day<=0) return -1;
+  var d = Math.ceil((now-day)/(3600*24));
+  return d-1;
+}
+
+module.exports = {
+  Time: Time,
+  StrToTime: StrToTime,
+  getDay: getDay,
+};

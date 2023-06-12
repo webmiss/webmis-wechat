@@ -1,0 +1,18 @@
+/* 价格-加密 */
+var priceEncode = function (price, fixed){
+  fixed = fixed || 2;
+  var str = parseFloat(price).toFixed(fixed).toString();
+  return str.replace(getRegExp('\d{1,3}(?=(\d{3})+(\.\d*)?$)', 'g'),'$&,');
+}
+
+/* 价格-解密 */
+var priceDecode = function (price, fixed){
+  fixed = fixed || 2;
+  var str = price.replace(getRegExp(',', 'g'), '');
+  return parseFloat(str).toFixed(fixed);
+}
+
+module.exports = {
+  PriceEncode: priceEncode,
+  PriceDecode: priceDecode,
+};

@@ -1,0 +1,3 @@
+<view class="wm-radio_body" bind:tap="click">
+  <view class="wm-radio {{ checked?'active':'' }}"></view>
+</view>

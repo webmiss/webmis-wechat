@@ -1,0 +1,5 @@
+@import '../../../assets/style/themes.less';
+.wm-radio_body{padding: 2px 8px 2px 0;}
+.wm-radio{position: relative; width: 18px; height: 18px; border-radius: 50%; border: rgba(160, 160, 160, 0.5) 1px solid; background-color: transparent;}
+.wm-radio.active{border-color: @Primary; background-color: @Primary;}
+.wm-radio.active::before{position: absolute; content: ''; left: 4px; top: 5px; width: 8px; height: 4px; border: #FFF 2px solid; border-top: none; border-right: none; transform: rotate(-45deg);}

@@ -1,0 +1,5 @@
+<view class="wm-button" style="width: {{width}};">
+  <button class="button" style="height: {{height}}; line-height: {{height}}; padding: {{padding}}; background-color: {{bgColor}}; color: {{color}}; font-size: {{fontSize}}; border-radius: {{borderRadius}};">
+    <slot></slot>
+  </button>
+</view>

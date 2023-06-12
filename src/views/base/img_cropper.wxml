@@ -1,0 +1,13 @@
+<image-cropper
+  id="image-cropper"
+  limit_move="{{true}}"
+  disable_rotate="{{true}}"
+  width="{{param.width}}"
+  height="{{param.height}}"
+  imgSrc="{{param.src}}"
+  bindimageload="loadImage"
+  bindtapcut="clickCut"
+></image-cropper>
+<view class="img_body">
+  <wm-button borderRadius="20px" height="40px" padding="0 40px" fontSize="14px" bind:tap="subData">保 存</wm-button>
+</view>
